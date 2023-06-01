@@ -1,0 +1,37 @@
+#!/usr/bin/env python
+import argparse
+from em100 import to_csv
+
+
+def main():
+    parser = argparse.ArgumentParser(
+                    prog='extechread',
+                    description='Convert data from Extech EM100 to csv',
+                    epilog='Good Luck')
+
+    parser.add_argument(
+        "input",
+        help="Input .bin file to read"
+    )
+    parser.add_argument(
+        "output",
+        help="Output CSV file to write"
+    )
+
+    parser.add_argument(
+        "-r", "--recursive",
+        action="store_true",
+        help="""NYI---Supply a directory of bin files instead of just one.
+note that if you export more than once to the same directory
+your CSV file will contain duplicate records"""
+)
+
+    args = parser.parse_args()
+
+    if args.recursive:
+        pass
+    to_csv(args.input, args.output)
+
+
+if __name__ == "__main__":
+    main()
