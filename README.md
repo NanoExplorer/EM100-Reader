@@ -29,4 +29,4 @@ options:
 ```
 
 ## Documentation:
-`from em100 import *` gives you access to a couple of functions. Perhaps most useful are the `read_to_array` and `read_to_pandas` functions, which you can call with the path to a bin file to read. These will return a list or a DataFrame, respectively, containing all the records from the file.
+`from em100 import *` gives you access to a couple of functions. Perhaps most useful are the `read_to_array` and `read_to_pandas` functions, which you can call with the path to a bin file to read. These will return a list or a DataFrame, respectively, containing all the records from the file. And for more information about my development of this tool, see [this post](https://rooneyworks.com/2023/06/reading-extech-em100-data-files/).
